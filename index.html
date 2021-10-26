@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<!--
+Author:  Yasir Tahir
+Class:   Web & Distributed Programming
+Project: Map Mania V2
+Session: su18-cpsc-24700-lt1
+Description: This is the second version of Map Mania that I am creating for Sprint 4 Lab Assignment.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Map Mania Version Two</title>
+    <link rel="stylesheet" href="map-mania.css">
+    <script src="map-mania.js"></script>
+
+</head>
+
+<body onload="initApplication()" onload="winClose()">
+    <h1 id='head'>Map Mania Version Two!</h1>
+    <div id='categories'>
+        <button onclick="autoWin()">Free Win:</button>
+        <p id="win"></p>
+        <button onclick="myDefaultHint()">Click for Hint:</button>
+        <p id="message"></p>
+        <p id='defaulthint'></p>
+        <p id="score"></p>
+    </div>
+
+    <div id="helpID" class="help">
+
+        <div class="help-content">
+            <span onclick="closeHelp()" class="close">&times;</span>
+            <h2>Welcome to Map Mania Version Two by Yasir! </h2>
+            <p>The following game is a demonstration of the Google Maps JavaScript API. In order to play, the user must interact with the Google Maps interface (using pan and zoom) to search for a number of selected locations. Once the user is sufficiently
+                zoomed in on the desired location and said location is within the bounds of the map, the following events will occur; An icon will drop on the location, the score will increase by one point, and the map will reset. From there, the user
+                will continue to search for new locations until they've exhausted the options and achieved the maximum score of ten points; At this point, they've won the game. Users have two other tools at their disposal to help them too. These include
+                a button labeled 'Free Win' and another labeled 'Click for Hint'. When the 'Free Win' button is clicked, the game will simulate a victory - assigning all ten points and dropping cursors on all the locations. When the 'Click for Hint' button
+                is clicked, the user will be prompted with a block of text that helps to hint at where the desired location is. Good Luck and Enjoy the Game!
+            </p>
+            <button onclick="closeHelp()">Close Window</button>
+        </div>
+    </div>
+
+
+    <div id="googleMapID"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRLryBXkeY7go4HJorA7FG1ort-10GDD4&callback=initMap&v=weekly" async></script>
+
+</body>
+
+</html>
